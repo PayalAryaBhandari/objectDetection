@@ -1,0 +1,26 @@
+{% block title %}Upload{% endblock %}
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+<h1>Upload an image</h1>
+      <hr>
+<form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+<!--<img src="{{url_for('static', filename='Hermes.png')}}" align="middle" />-->
+<div class="form-group">
+          <label>Select image</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image">
+            <label class="custom-file-label" for="image">Select image...</label>
+          </div>
+        </div>
+<button type="submit" class="btn btn-primary">Upload</button>
+<div>
+	<img src="{{ user_image }}" alt="User Image">
+</div>
+</form>
+</div>
+  </div>
+</div>
+{% endblock %}
